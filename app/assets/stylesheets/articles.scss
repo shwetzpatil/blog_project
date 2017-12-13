@@ -1,0 +1,30 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  color: red;
+  text-align: center;
+}
+  
+.article-display {
+  padding: 30px;
+}
+
+.article-title {
+  color: chocolate;
+  font: 30px;
+  text-align: center;
+  padding: 40px;
+}
+
+.article-body {
+  padding:20px; 
+  text-align: justify;
+}
+
+.new-article {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}

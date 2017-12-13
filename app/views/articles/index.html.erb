@@ -1,0 +1,21 @@
+<div class="container-fluid body-content-wrapper">
+  <h1>Listing all articles</h1>
+   <div class="row">
+      <% @articles.each do |article| %>
+        <div class="col-sm-12 col-md-6 article-display">
+          <a class="article-title"><%= article.title %></a>
+          <p class="article-body"><%= article.text %></p>
+          <p>
+            <%= link_to 'Show', article_path(article) %>
+            <%= link_to 'Edit', edit_article_path(article) %>
+            <%= link_to 'Delete', article_path(article), method: :delete, data: { confirm:'Are you sure' } %></p>
+        </div>    
+      <% end %>
+    </div>
+        
+  </table>
+  <div class="new-article">
+    <%= link_to 'New Article', new_article_path %>
+  </div>
+
+</div>
