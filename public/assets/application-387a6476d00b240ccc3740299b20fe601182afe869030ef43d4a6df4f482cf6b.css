@@ -1,0 +1,71 @@
+/* line 5, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/articles.scss */
+h1 {
+  color: red;
+  text-align: center;
+}
+
+/* line 10, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/articles.scss */
+.article-display a {
+  color: blue;
+}
+
+/* line 14, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/articles.scss */
+.new-article {
+  text-align: center;
+  font-size: 30px;
+  color: blue;
+}
+/* line 4, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/welcome.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 8, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/welcome.scss */
+body {
+  min-height: 100%;
+}
+
+/* line 12, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/welcome.scss */
+.body-content-wrapper {
+  min-height: 100%;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+/* line 18, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/welcome.scss */
+.welcome-index-page {
+  text-align: center;
+}
+
+/* line 22, /Users/sagarpatil/shwetz/github/blog_project/app/assets/stylesheets/welcome.scss */
+footer {
+  background-color: gray;
+  color: red;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  padding: 10px;
+  display: block;
+  overflow: auto;
+  text-align: center;
+  float: left;
+  margin-top: 50px;
+  position: absolute;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
