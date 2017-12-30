@@ -1,7 +1,12 @@
 class ArticlesController < ApplicationController
   
   def index
-    @articles = Article.all
+    if params[:title]
+      search_term = params[:title]
+      @articles = Article.search(search_term)
+    else
+      @articles = Article.all
+    end
   end
 
   def show
@@ -45,7 +50,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :text)
+    params.require(:article).permit(:title, :text, :author)
   end
   
 end
