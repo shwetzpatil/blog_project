@@ -16,8 +16,8 @@
     </head>
 
   <body> 
-    <nav class="navbar navigation-wrapper navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid containe-nav-bar">
+    <nav class="navbar navigation-wrapper navbar-fixed-top" role="navigation">
+      <div class="container-fluid container-nav-bar">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -35,12 +35,18 @@
             <li class"nav-item">
               <%= link_to articles_path, class:"nav-link" do %><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>All Blogs<% end %>
             </li>
-            <li class="nav-item">
-              <%= form_with url: articles_path, method: "get", local: true, class: "navbar-form navbar-right" do |form| %>
-              <%= label_tag :title, 'Search for:' %>
-              <%= text_field_tag :title, '', type: "text", class: "form-control", placeholder: "search text" %>
-              <%= form.submit "Search", class: "btn btn-default" %>
-              <% end %>
+            <li class"nav-item">
+              <%= link_to welcome_contact_path, class:"nav-link" do %><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>Contact<% end %>
+            </li>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <%= form_with url: articles_path, method: "get", local: true, class: "navbar-form navbar-right" do |form| %>
+                <%= label_tag :title, 'Search for:' %>
+                <%= text_field_tag :title, '', type: "text", class: "form-control", placeholder: "search text" %>
+                <%= form.submit "Search", class: "btn btn-default" %>
+                <% end %>
+              </div>
+            </form>    
             </li>     
             </ul>
         </div>
