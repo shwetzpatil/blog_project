@@ -10,6 +10,9 @@ h1 {
 .navbar {
   background-color: rgb(243, 26, 91);
 }
+.navbar-toggle .icon-bar {
+  background: black;  
+}
   
 .article-display a{
   color: rgb(238, 8, 65);
@@ -20,3 +23,4 @@ h1 {
   font-size: 30px;
   color: blue;
 }
+
