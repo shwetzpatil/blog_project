@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
+  load_and_authorize_resource
   
   def index
     if params[:title]
@@ -12,10 +13,10 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comments = @article.comments
   end
 
   def new
-    @article = Article.new
   end
 
   def edit
@@ -24,10 +25,13 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    @article.user = current_user
 
     if @article.save
       redirect_to @article
     else
+      puts "Rendering with errors"
+      puts @article.errors.full_messages
       render 'new'
     end    
   end

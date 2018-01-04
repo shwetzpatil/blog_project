@@ -7,7 +7,7 @@
 
   <p>
   <strong>Author:</strong>
-  <%= @article.author %>
+  <%= @article.user.first_name %>
   </p>
 
   <p>
@@ -15,13 +15,21 @@
   <%= @article.text %>
   </p>
 
-  <h2>Comments</h2>
-  <%= render @article.comments %>
-
-  <h3>Add a comment:</h3>
-  <%= render 'comments/form' %>
-
+  <% if can? :update, @article %>
   <%= link_to 'Edit', edit_article_path(@article) %>
+  <% end%>
+  
+
+  <h3>Comments</h3>
+  <%= render 'comment' %>
+
+  <% if can? :create, Comment %>
+  <h3>Add a comment:</h3>
+  <%= render 'new_comment' %>
+  <% else %>
+    <p> Please must <%= link_to "log in", user_session_path %> or <%=link_to "sign up", new_user_registration_path %> to add your comment </p>
+  <%end%>
+
   <%= link_to 'Back', articles_path %>
 
 </div>

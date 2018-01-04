@@ -1,0 +1,17 @@
+<% @comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.user.first_name %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+
+  <p>
+    <% if can? :destroy, comment %>
+    <%= link_to 'Delete', [comment.article, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </p>
+<% end %>  

@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   has_many :comments, dependent: :destroy
-  has_many :users
+  belongs_to :user
   validates :title, presence: true, length: { minimum: 5 }  
 
   def self.search(search_term)
