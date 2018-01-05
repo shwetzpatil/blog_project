@@ -29,6 +29,8 @@ class ArticlesController < ApplicationController
 
     if @article.save
       redirect_to @article
+      puts "Sending subscribers email"
+      SubscriptionMailer.mail_subscribers(@article).deliver_now
     else
       puts "Rendering with errors"
       puts @article.errors.full_messages

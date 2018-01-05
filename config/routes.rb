@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :subscribes
   devise_for :users
   resources :users
   get 'welcome/index'

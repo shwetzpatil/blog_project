@@ -50,15 +50,13 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <form class="navbar-form" role="search">
                 <div class="form-group">
-                  <%= form_with url: articles_path, method: "get", local: true, class: "navbar-form navbar-right" do |form| %>
+                  <%= form_with(model: @search_article_obj, method: "get", local: true, class: "navbar-form navbar-right") do |form| %>
                   <%= label_tag :title, 'Search for:' %>
                   <%= text_field_tag :title, '', type: "text", class: "form-control", placeholder: "search text" %>
                   <%= form.submit "Search", class: "btn btn-default" %>
                   <% end %>
                 </div>
-              </form>    
             </li>     
           </ul>
         </div>
@@ -71,7 +69,27 @@
       <p id="alert" class="alert alert-info"><%= alert %></p>
     <% end %> 
     
-    <%= yield %>
+    <div class="col-md-10">
+      <%= yield %>
+    </div>
+
+    <div class="col-md-2 text-center"> <!--sidebar from here-->
+      <p>Subscribe here!!!<p>
+      <h5>DON'T MISS A THING</h5><br>
+      <%= form_with(model: @subscribe_obj, local: true) do |f| %>
+        <p>
+          <%= f.label :email %>
+          <%= f.text_field :email, id: :subscribe_email, class:"form-control" %>
+        </p>
+        <p>
+          <%= f.label :subscriber_name %>
+          <%= f.text_field :subscriber_name, id: :subscribe_subscriber_name, class:"form-control" %>
+        </p>
+      <%= f.submit 'Subscribe', class: "btn btn-default"%>
+      <% end %>
+    </div>
+  
+  
 
     <footer class = "container-fluid copy-right">
       &copy; 2017 blogger
