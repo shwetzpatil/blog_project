@@ -7,20 +7,25 @@ html{
 }
 body{ 
   min-height: 100%;
+  font-family: "American Typewriter", "serif";
 }
 
 .body-content-wrapper{
   min-height: 100%;
   margin-bottom: 100px; //height of the footer plus some padding
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .welcome-index-page {
   text-align: center;
 }
+.project-name a{
+  font-size: 25px;
+  color: white;
+}
 
 footer {
-  background-color: gray;
+  background-color: rgb(247, 196, 196);
   color: red;  
   width: 100%;
   bottom: 0;

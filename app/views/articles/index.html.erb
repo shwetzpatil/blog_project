@@ -1,5 +1,10 @@
 <div class="container-fluid body-content-wrapper">
   <h1>Listing all articles</h1>
+  <div class="new-article">
+    <% if can? :create, Article %>
+      <%= link_to 'New Article', new_article_path %>
+    <% end %>  
+    </div>
    <div class="row">
       <% @articles.each do |article| %>
         <div class="col-sm-12 col-md-4 article-display">
@@ -18,9 +23,5 @@
         </div>  
       <% end %>    
     </div>
-    <div class="new-article">
-    <% if can? :create, Article %>
-      <%= link_to 'New Article', new_article_path %>
-    <% end %>  
-    </div>
+    
 </div>

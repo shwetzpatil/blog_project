@@ -8,19 +8,27 @@ h1 {
 }
 
 .navbar {
-  background-color: rgb(243, 26, 91);
+  background-color: rgb(247, 65, 98);
 }
 .navbar-toggle .icon-bar {
   background: black;  
+}
+.navbar li a {
+  color: white;
 }
   
 .article-display a{
   color: rgb(238, 8, 65);
 }
 
+.new-article a {
+  font-size: 25px;
+  color: rgb(235, 67, 98);
+  border: 2px solid rgb(243, 39, 107);
+}
+
 .new-article {
+  margin: 20px;
   text-align: center;
-  font-size: 30px;
-  color: blue;
 }
 

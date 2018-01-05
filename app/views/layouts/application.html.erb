@@ -27,7 +27,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand project-name">
-             <strong><%= link_to "MOTIVATINAL BLOGS", root_path %></strong>
+             <strong><%= link_to "BLOG IT!", root_path %></strong>
           </div>
         </div>
   
@@ -73,7 +73,7 @@
       <%= yield %>
     </div>
 
-    <div class="col-md-2 text-center"> <!--sidebar from here-->
+    <div class=" sidebar col-md-2 text-center"> <!--sidebar from here-->
       <p>Subscribe here!!!<p>
       <h5>DON'T MISS A THING</h5><br>
       <%= form_with(model: @subscribe_obj, local: true) do |f| %>
